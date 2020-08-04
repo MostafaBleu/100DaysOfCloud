@@ -1,52 +1,87 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![placeholder image](cover.png)
 
-# New post title here
+# Ready Steady Go!
 
 ## Introduction
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+I learn best by doing, so I am going to setup the tools needed to do Terraform labs on my local machine.
+
+Since I am going to be mainly using Azure and I want to be able to execute commands interactively I will have to figure out how the authentication is done too.
 
 ## Prerequisite
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+- You need to have some priore knowledge of the cloud provider you will use, in my case Azure.
+- You will also need an Azure account with an active subscription to be able to execute the labs
 
-## Use Case
+## Install the tools and environment
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- Install Terraform
+- VS Code : Install Terraform Extension
 
-## Cloud Research
+## Authenticating using Azure CLI
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+- I will be [authenticating using Azure CLI](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html) since I am going to use Terraform in an interactive mode
+- The recommendation is to [use Managed Service Identity](https://www.terraform.io/docs/providers/azurerm/guides/managed_service_identity.html) when running Terraform non-interactively (from CI server for instance)
 
-## Try yourself
+```bash
+# 1. Install Azure CLI
+brew update && brew install azure-cli
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+# 2. Login
+az login
 
-### Step 1 — Summary of Step
+# 3. List subscriptions associated with the account
+az account lis -o table
 
-![Screenshot](https://via.placeholder.com/500x300)
+# 4. If you have more than one subscription specify one
+az account set --subscription="SUBSCRIPTION_ID"
+```
 
-### Step 1 — Summary of Step
+To test that everything is well configured, let's create a Resource Group
 
-![Screenshot](https://via.placeholder.com/500x300)
+Copy this into a file named `main.tf` inside a folder `MyFirstTerraform`
 
-### Step 3 — Summary of Step
+```json
+provider "azurerm" {
+  features{}
+  version = "2.9.0"
+}
 
-![Screenshot](https://via.placeholder.com/500x300)
+#create resource group
+resource "azurerm_resource_group" "rg" {
+    name     = "rg-MyFirstTerraform"
+    location = "westus2"
+    tags      = {
+      Environment = "Terraform Learning"
+    }
+}
+```
 
-## ☁️ Cloud Outcome
+Then execute these commands:
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+`terraform init`
+
+![terraform init](terraform-init.png)
+
+`terraform plan`
+
+![terraform plan](terraform-plan.png)
+
+
+`terraform apply`
+
+![terraform plan](terraform-apply.png)
+
+## 🎉 Wohoo 🥳 it worked !
+
+Now connect to the Azure Portal, you will see that the resource group was created
+![Resource group on Azure](result.png)
+
 
 ## Next Steps
 
-✍️ Describe what you think you think you want to do next.
+The next time I will go through the details of what happened here and write some infrastructure
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
-
-[link](link)
+[Twitter](https://twitter.com/BleuMostafa/status/1290620164640313350)

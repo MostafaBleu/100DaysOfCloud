@@ -2,32 +2,27 @@
   <img src="banner.png">
 </p>
 
-## The Challenge
-1. Read about the challenge and register at [#100DaysOfCloud.com](https://100DaysOfCloud.com)
-2. Join the [Discord Channel](https://discord.gg/c6Db8nY)
-3. Copy the [100DaysOfCloud/100DaysOfCloud Journey Template](https://github.com/100DaysOfCloud/100DaysOfCloud/generate)
-4. Use the [Micro](Templates/000-DAY-ARTICLE-MICRO-TEMPLATE.md), [Short](Templates/001-DAY-ARTICLE-SHORT-TEMPLATE.md) or [Long](Templates/002-DAY-ARTICLE-LONG-TEMPLATE.md) Day Journey Template and document your day-to-day progress.
-5. Update your main README to link back to your Day Journey article
-4. If you need ideas go to [#100DaysOfCloudIdeas](https://github.com/100DaysOfCloud/100DaysOfCloudIdeas)
 
-## How to use this template:
-Fill in your details where you see this icon ✍️
-We have provided a sample Day Journey entry staring at 0. You can delete this example.
+## Mostafa Bleu's Cloud Journey
 
-## [✍️ Your Name]'s Cloud Journey
+Hi, My name is Mostafa Ouagague but everyone calls me Bleu 🧢, a software engineer from 🇲🇦 Morocco, currently working as an Site Reliability Engineer (SRE) based in 🇫🇷 France.
 
-[✍️ Introduce yourself]
+I am starting this challenge to learn more about Infrastructure as Code, Cloud architecture and Performance.
 
-[✍️ Tell us why you started this challenge]
+At the end of this challenge I want to :
+- Have a deeper understanding of Terraform 
+- Gain more skills on Microsoft Azure
+- Learn more about Cloud Performance (at least that's how I am calling it in my head for now 😅)
 
-[✍️ Tell us where you want to be at the end of the challenge]
+You can follow my journey on:
 
-- [✍️ Link to your Twitter](https://twitter.com/username)
-- [✍️ Link to your LinkedIn](https://www.linkedin.com/in/username)
+- [Twitter](https://twitter.com/BleuMostafa)
+- [LinkedIn](https://www.linkedin.com/in/mostafaouagague/)
+- [Personal Blog](https://www.mostafableu.com/blog)
 
 ## Stepping out the door
 
-- [ ] ☁️ 1 > [My First Day](Journey/001/Readme.md)
+- [x] ☁️ 1 > [Ready Steady Go!](Journey/001/Readme.md)
 - [ ] ☁️ 2 > [](Journey/002/Readme.md)
 - [ ] ☁️ 3 > [](Journey/003/Readme.md)
 - [ ] ☁️ 4 > [](Journey/004/Readme.md)
@@ -154,3 +149,12 @@ We have provided a sample Day Journey entry staring at 0. You can delete this ex
 - [ ] ☁️ 98 > [](Journey/098/Readme.md)
 - [ ] ☁️ 99 > [](Journey/099/Readme.md)
 - [ ] ☁️ 100 > [](Journey/100/Readme.md)
+
+
+## The Challenge
+1. Read about the challenge and register at [#100DaysOfCloud.com](https://100DaysOfCloud.com)
+2. Join the [Discord Channel](https://discord.gg/c6Db8nY)
+3. Copy the [100DaysOfCloud/100DaysOfCloud Journey Template](https://github.com/100DaysOfCloud/100DaysOfCloud/generate)
+4. Use the [Micro](Templates/000-DAY-ARTICLE-MICRO-TEMPLATE.md), [Short](Templates/001-DAY-ARTICLE-SHORT-TEMPLATE.md) or [Long](Templates/002-DAY-ARTICLE-LONG-TEMPLATE.md) Day Journey Template and document your day-to-day progress.
+5. Update your main README to link back to your Day Journey article
+4. If you need ideas go to [#100DaysOfCloudIdeas](https://github.com/100DaysOfCloud/100DaysOfCloudIdeas)
