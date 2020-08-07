@@ -1,52 +1,40 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![Cover](cover.png)
 
-# New post title here
+# Dependencies & Provisioners
 
-## Introduction
+## Resource Dependencies
 
-✍️ (Why) Explain in one or two sentences why you choose to do this project or cloud topic for your day's study.
+The order of blocks is not important, as the order of the plan is inferred from blocks dependencies
 
-## Prerequisite
+**Implicit dependencies**
 
-✍️ (What) Explain in one or two sentences the base knowledge a reader would need before describing the the details of the cloud service or topic.
+- Determined automatically by the Azure provider based on configuration
+- Inferred from using the expression for example
 
-## Use Case
+**Explicit dependencies**
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-- ✍️ (Show-Me) Explain in one or two sentences the use case
+- `depends_on` meta-argument to explicitly define a dependency
+- Used when Terraform can't see an implicit dependency or want to override the default execution plan
 
-## Cloud Research
+### Lab: Build a Linux Virtual machine with Public Ip and apply an NSG to enable SSH access
 
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
+![Azure](azure.png)
 
-## Try yourself
+See [Lab1/main.tf](Lab1/main.tf)
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
 
-### Step 1 — Summary of Step
+## Provisioners
 
-![Screenshot](https://via.placeholder.com/500x300)
+- Help do additional setup and configuration when a resource is created or destroyed
+- Similar to Virtual Machine Extensions in Azure and Cloud Init, User Date in AWS
+- Are not intended to maintain desired state and configuration of existing resources → Use a configuration management tool instead (Chef, Ansible or PowerShell)
+- Use Provisioners as a last resort
 
-### Step 1 — Summary of Step
+### Lab: Build a Linux Virtual machine and copy a local file to it using `file` provisioner
 
-![Screenshot](https://via.placeholder.com/500x300)
+See [Lab2/main.tf](Lab2/main.tf)
 
-### Step 3 — Summary of Step
-
-![Screenshot](https://via.placeholder.com/500x300)
-
-## ☁️ Cloud Outcome
-
-✍️ (Result) Describe your personal outcome, and lessons learned.
-
-## Next Steps
-
-✍️ Describe what you think you think you want to do next.
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
-
-[link](link)
+[Twitter](https://twitter.com/BleuMostafa/status/1291750155688042497?s=20)

@@ -1,0 +1,2 @@
+admin_username = "USERNAME"
+admin_password = "NOT SAFE YOU SHOULD USE KEYS AND CERTIFICATS INSTEAD"

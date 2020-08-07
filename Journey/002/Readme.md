@@ -1,5 +1,4 @@
-**Add a cover photo like:**
-![placeholder image](cover.jpg)
+![Cover](cover.jpg)
 
 # Terraform's Simple stages & commands 👌
 
